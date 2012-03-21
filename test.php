@@ -7,7 +7,7 @@
  $body = "Hi,\n\nHow are you?";
  
  $host = "mail.officemining.com";
- $username = "no-reply@officemining.com"; 
+ $username = "no-reply@officemining.com";
  $password = "fso!43Kir3F";
  
  $headers = array ('From' => $from,
