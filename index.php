@@ -20,5 +20,5 @@
 			exit();
 		} 
 	
-	app::run();
+	app::run(); 
 ?>
