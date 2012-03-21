@@ -18,7 +18,6 @@
 		{
 			header("location:http://".$_SERVER['HTTP_HOST']."/home/login");
 			exit();
-		} 
-	
-	app::run(); 
+		}
+	app::run();
 ?>
