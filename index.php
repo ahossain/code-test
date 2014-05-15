@@ -1,23 +1,23 @@
 <?php
-$name = "";
-
-if (isset($_POST['action']) & $_POST['action'] == 'save') {
-	$name = $_POST['nm'];
+	$name = "";
 	
-	$conn = mysql_connect('localhost','root','') or die('error connecting to db server');
-	mysql_select_db('test');
+	if (isset($_POST['action']) & $_POST['action'] == 'save') {
+		$name = $_POST['nm'];
+		
+		$conn = mysql_connect('localhost','root','') or die('error connecting to db server');
+		mysql_select_db('test');
+		
+		mysql_query("INSERT INTO test_table (test_field) VALUES ('". mysql_escape_string($name) ."')");
+	}
 	
-	mysql_query("INSERT INTO test_table (test_field) VALUES ('". mysql_escape_string($name) ."')");
-}
-
-$form = '<div>Input you name</div><form method="post" name="fm" action""><input type="hidden" name="action" value="save"><input type="text" name="nm" value=""><input type="submit" value="Submit"></form>';
-
-echo $form;
-
-if (!empty($name))
-	echo "Hello, $name!";
-
-exit;
+	$form = '<div>Input you name</div><form method="post" name="fm" action""><input type="hidden" name="action" value="save"><input type="text" name="nm" value=""><input type="submit" value="Submit"></form>';
+	
+	echo $form;
+	
+	if (!empty($name))
+		echo "Hello, $name!";
+	
+	exit;
 
 class SomeClass
 {
